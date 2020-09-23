@@ -1,5 +1,6 @@
 node {
     stage("composer_install") {
+        checkout scm
         // Run `composer update` as a shell script
         sh '/usr/local/bin/composer update'
     }
